@@ -6,4 +6,5 @@ Target = etc/pacman.conf
 
 [Action]
 Description = Checking antergos repo priority.
+When = PostTransaction
 Exec = /usr/bin/antergos-repo-priority.py

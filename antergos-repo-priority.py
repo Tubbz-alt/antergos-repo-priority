@@ -93,6 +93,8 @@ if __name__ == '__main__':
         print('Changing antergos repo priority in pacman.conf.pacnew...')
         repo_priority.change_antergos_repo_priority()
         repo_priority.print_notice_to_stdout()
-        sys.exit(0)
-    
-    sys.exit(1)
+        
+        if len(sys.argv) > 1 and 'True' == sys.argv[1]:
+            sys.exit(1)
+
+    sys.exit(0)

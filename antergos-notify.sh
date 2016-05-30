@@ -24,13 +24,16 @@ export GETTEXT='gettext "ANTERGOS_NOTIFY"'
 # ===>>> BEGIN Translatable Strings <<<=== #
 
 # Notification Body Part 1
-_part1=$(${GETTEXT} 'The antergos repo priority has been updated. You should review the change in')
+_part1=$(${GETTEXT} 'The antergos repo priority has been updated.')
 
 # Notification Body Part 2
-_part2=$(${GETTEXT} '/etc/pacman.conf.pacnew and then update your pacman.conf accordingly.')
+_part2=$(${GETTEXT} 'You should review the change in /etc/pacman.conf.pacnew')
 
 # Notification Body Part 3
-_part3=$(${GETTEXT} 'For more information see:')
+_part3=$(${GETTEXT} 'and then update your pacman.conf accordingly.')
+
+# Notification Body Part 4
+_part4=$(${GETTEXT} 'For more information see:')
 
 # Notification Subject
 _subject=$(${GETTEXT} '"ATTENTION: Antergos System Message"')
@@ -38,7 +41,7 @@ _subject=$(${GETTEXT} '"ATTENTION: Antergos System Message"')
 # ===>>> END Translatable Strings <<<=== #
 
 
-_msg="\"${_part1} ${_part2}\n\n${_part3}\nhttps://antergos.com/wiki/antergos-repo-priority\""
+_msg="\"${_part1} ${_part2} ${_part3}\n\n${_part4}\nhttps://antergos.com/wiki/antergos-repo-priority\""
 
 maybe_display_desktop_alert() {
 	if [[ -e '/usr/bin/pacman-boot' ]]; then

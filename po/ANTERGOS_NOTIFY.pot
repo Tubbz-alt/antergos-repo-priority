@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: antergos-notify 1.0.5\n"
 "Report-Msgid-Bugs-To: Antergos Developers <dev@antergos.com>\n"
-"POT-Creation-Date: 2016-05-30 11:55-0500\n"
+"POT-Creation-Date: 2016-05-30 13:10-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,15 +34,20 @@ msgstr ""
 
 #. Notification Body Part 1
 #: antergos-notify.sh:27
-msgid "\"The antergos repo priority has been updated. You should review the change in"
+msgid "The antergos repo priority has been updated. You should review the change in"
 msgstr ""
 
 #. Notification Body Part 2
 #: antergos-notify.sh:30
-msgid "/etc/pacman.conf.pacnew and then update your pacman.conf accordingly.\""
+msgid "/etc/pacman.conf.pacnew and then update your pacman.conf accordingly."
+msgstr ""
+
+#. Notification Body Part 3
+#: antergos-notify.sh:33
+msgid "For more information see:"
 msgstr ""
 
 #. Notification Subject
-#: antergos-notify.sh:35
+#: antergos-notify.sh:36
 msgid "\"ATTENTION: Antergos System Message\""
 msgstr ""

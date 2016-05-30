@@ -42,6 +42,7 @@ _subject=$(${GETTEXT} '"ATTENTION: Antergos System Message"')
 
 
 _msg="\"${_part1} ${_part2} ${_part3}\n\n${_part4}\nhttps://antergos.com/wiki/antergos-repo-priority\""
+echo "${_msg}" > /dev/null
 
 maybe_display_desktop_alert() {
 	if [[ -e '/usr/bin/pacman-boot' ]]; then

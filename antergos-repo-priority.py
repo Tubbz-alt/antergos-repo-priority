@@ -105,10 +105,8 @@ class AntergosRepoPriority:
         part3 = _('and then update your pacman.conf accordingly.')
         part4 = _('For more information see:')
 
-        part1 = part1.split('.')
-
         cprint(
-            '            =======>>> {} <<<=======            '.format(subject.replace('"', '')),
+            '    =======>>> {} <<<=======    '.format(subject.replace('"', '')),
             color='white',
             on_color='on_red',
             attrs=['bold', 'blink']
@@ -119,10 +117,10 @@ class AntergosRepoPriority:
         print('{0} {1}'.format(prefix, part3))
         print('')
         print('{0} {1}'.format(prefix, part4))
-        print('https://antergos.com/wiki/antergos-repo-priority')
+        print('{} https://antergos.com/wiki/antergos-repo-priority'.format(prefix))
         print('')
         cprint(
-            '                                                        ',
+            '                                                                ',
             color='white',
             on_color='on_red',
             attrs=['bold', 'blink']

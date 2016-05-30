@@ -130,6 +130,8 @@ class AntergosRepoPriority:
 
 
 if __name__ == '__main__':
+    setup_gettext()
+
     repo_priority = AntergosRepoPriority()
     doing_install = os.environ.get('CNCHI_RUNNING', False)
 

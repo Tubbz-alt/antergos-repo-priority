@@ -18,13 +18,14 @@
 #  along with antergos-notify; if not, see <http://www.gnu.org/licenses/>.
 # 
 # Translators:
+# Jeff Huang <s8321414@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Antergos\n"
 "Report-Msgid-Bugs-To: Antergos Developers <dev@antergos.com>\n"
 "POT-Creation-Date: 2016-05-30 13:10-0500\n"
-"PO-Revision-Date: 2016-05-30 18:57+0000\n"
-"Last-Translator: Dustin Falgout <dustin@falgout.us>\n"
+"PO-Revision-Date: 2016-05-30 23:41+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/faidoc/antergos/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,24 +36,24 @@ msgstr ""
 #. Notification Body Part 1
 #: antergos-notify.sh:27
 msgid "The antergos repo priority has been updated."
-msgstr ""
+msgstr "Antergos 套件庫優先權已更新。"
 
 #. Notification Body Part 2
 #: antergos-notify.sh:30
 msgid "You should review the change in /etc/pacman.conf.pacnew"
-msgstr ""
+msgstr "您必須審閱在 /etc/pacman.conf.pacnew 中的變更"
 
 #. Notification Body Part 3
 #: antergos-notify.sh:33
 msgid "and then update your pacman.conf accordingly."
-msgstr ""
+msgstr "然後對應地更新您的 pacman.conf。"
 
 #. Notification Body Part 4
 #: antergos-notify.sh:36
 msgid "For more information see:"
-msgstr ""
+msgstr "要取得更多資訊請見："
 
 #. Notification Subject
 #: antergos-notify.sh:39
 msgid "\"ATTENTION: Antergos System Message\""
-msgstr ""
+msgstr "\"注意：Antergos 系統訊息\""

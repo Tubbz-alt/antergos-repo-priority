@@ -120,7 +120,7 @@ class AntergosRepoPriority:
         print('{} https://antergos.com/wiki/antergos-repo-priority'.format(prefix))
         print('')
         cprint(
-            '                                                                ',
+            '                                                                 ',
             color='white',
             on_color='on_red',
             attrs=['bold', 'blink']

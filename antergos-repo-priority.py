@@ -82,6 +82,11 @@ class AntergosRepoPriority:
          
         return lines
      
+    def maybe_rename_pacman_config_pacnew(self):
+        if self.pmconf_new == self.read_from and 'antergos' not in open(self.pmconf_new).read():
+            os.rename(self.pmconf_new, '{}.1'.format(self.pmconf_new))
+            self.read_from = self.pmconf
+
     def change_antergos_repo_priority(self):
         antergos_repo_lines = self.get_antergos_repo_lines()
         new_contents = []
@@ -132,6 +137,8 @@ if __name__ == '__main__':
 
     repo_priority = AntergosRepoPriority()
     doing_install = os.environ.get('CNCHI_RUNNING', False)
+
+    self.maybe_rename_pacman_config_pacnew()
 
     if not repo_priority.antergos_repo_before_arch_repos():
         print('Changing antergos repo priority in pacman.conf.pacnew...')

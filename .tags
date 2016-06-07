@@ -17,6 +17,7 @@ get_antergos_repo_lines	/home/dustin/antergos-repo-priority/antergos-repo-priori
 get_pacman_config_contents	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^    def get_pacman_config_contents(self):$/;"	m
 gettext	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^import gettext$/;"	i
 locale	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^import locale$/;"	i
+maybe_rename_pacman_config_pacnew	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^    def maybe_rename_pacman_config_pacnew(self):$/;"	m
 os	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^import os$/;"	i
 pmconf	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^    pmconf = '\/etc\/pacman.conf'$/;"	v
 pmconf_new	/home/dustin/antergos-repo-priority/antergos-repo-priority.py	/^    pmconf_new = '\/etc\/pacman.conf.pacnew'$/;"	v

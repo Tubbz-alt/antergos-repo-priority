@@ -44,13 +44,10 @@ class AntergosRepoPriority:
     pmconf = '/etc/pacman.conf'
     pmconf_new = '/etc/pacman.conf.pacnew'
 
-    def __init__(self):
-        self.read_from = self.pmconf_new if os.path.exists(self.pmconf_new) else self.pmconf
-    
     def get_pacman_config_contents(self):
         contents = []
         
-        with open(self.read_from, 'r') as pacman_config:
+        with open(self.pmconf, 'r') as pacman_config:
             contents.extend(pacman_config.readlines())
         
         return contents
@@ -79,13 +76,12 @@ class AntergosRepoPriority:
             elif re.match(r'^\[antergos\]', line):
                 lines.append(line)
                 entered_antergos = True
-         
+
         return lines
-     
-    def maybe_rename_pacman_config_pacnew(self):
-        if self.pmconf_new == self.read_from and 'antergos' not in open(self.pmconf_new).read():
-            os.rename(self.pmconf_new, '{}.1'.format(self.pmconf_new))
-            self.read_from = self.pmconf
+
+    def maybe_rename_existing_pacnew(self):
+        if os.path.exists(self.pmconf_new):
+            os.rename(self.pmconf_new, '{}.old'.format(self.pmconf_new))
 
     def change_antergos_repo_priority(self):
         antergos_repo_lines = self.get_antergos_repo_lines()
@@ -138,10 +134,9 @@ if __name__ == '__main__':
     repo_priority = AntergosRepoPriority()
     doing_install = os.environ.get('CNCHI_RUNNING', False)
 
-    self.maybe_rename_pacman_config_pacnew()
-
     if not repo_priority.antergos_repo_before_arch_repos():
         print('Changing antergos repo priority in pacman.conf.pacnew...')
+        repo_priority.maybe_rename_existing_pacnew()
         repo_priority.change_antergos_repo_priority()
         repo_priority.print_notice_to_stdout()
 

@@ -20,13 +20,14 @@
 # Translators:
 # Dušan Kazik <prescott66@gmail.com>, 2016
 # Dustin Falgout <dustin@falgout.us>, 2016
+# Martin Kříž <liberte.czech@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Antergos\n"
 "Report-Msgid-Bugs-To: Antergos Developers <dev@antergos.com>\n"
 "POT-Creation-Date: 2016-05-30 13:10-0500\n"
-"PO-Revision-Date: 2016-05-30 19:32+0000\n"
-"Last-Translator: Dustin Falgout <dustin@falgout.us>\n"
+"PO-Revision-Date: 2016-05-31 07:52+0000\n"
+"Last-Translator: Martin Kříž <liberte.czech@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/faidoc/antergos/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

@@ -19,13 +19,14 @@
 # 
 # Translators:
 # Helder Meneses <helder.meneses@gmail.com>, 2016
+# Ricardo Simões <xmcorporation@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Antergos\n"
 "Report-Msgid-Bugs-To: Antergos Developers <dev@antergos.com>\n"
 "POT-Creation-Date: 2016-05-30 13:10-0500\n"
-"PO-Revision-Date: 2016-05-30 18:57+0000\n"
-"Last-Translator: Dustin Falgout <dustin@falgout.us>\n"
+"PO-Revision-Date: 2016-05-31 22:18+0000\n"
+"Last-Translator: Helder Meneses <helder.meneses@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/faidoc/antergos/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,22 +37,22 @@ msgstr ""
 #. Notification Body Part 1
 #: antergos-notify.sh:27
 msgid "The antergos repo priority has been updated."
-msgstr ""
+msgstr "A prioridade do repositório antergos foi atualizada."
 
 #. Notification Body Part 2
 #: antergos-notify.sh:30
 msgid "You should review the change in /etc/pacman.conf.pacnew"
-msgstr ""
+msgstr "Deve rever a alteração em /etc/pacman.conf.pacnew"
 
 #. Notification Body Part 3
 #: antergos-notify.sh:33
 msgid "and then update your pacman.conf accordingly."
-msgstr ""
+msgstr "e depois actualizar o seu pacman.conf em conformidade."
 
 #. Notification Body Part 4
 #: antergos-notify.sh:36
 msgid "For more information see:"
-msgstr ""
+msgstr "Para mais informação veja:"
 
 #. Notification Subject
 #: antergos-notify.sh:39

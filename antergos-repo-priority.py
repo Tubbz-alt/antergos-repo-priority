@@ -39,7 +39,7 @@ def setup_gettext():
         lang = gettext.translation(APP_NAME, LOCALE_DIR, [locale_code], None, True)
         lang.install()
     except Exception:
-        print('Setting the antergos repo priority failed.')
+        print('Translations setup failed. Using source strings (English).')
 
 
 class AntergosRepoPriority:

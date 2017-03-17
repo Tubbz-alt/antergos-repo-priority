@@ -34,24 +34,30 @@ def setup_gettext():
     gettext.textdomain(APP_NAME)
     gettext.bindtextdomain(APP_NAME, LOCALE_DIR)
 
-    locale_code, encoding = locale.getdefaultlocale()
-    lang = gettext.translation(APP_NAME, LOCALE_DIR, [locale_code], None, True)
-    lang.install()
+    try:
+        locale_code, encoding = locale.getdefaultlocale()
+        lang = gettext.translation(APP_NAME, LOCALE_DIR, [locale_code], None, True)
+        lang.install()
+    except Exception:
+        print('Setting the antergos repo priority failed.')
 
 
 class AntergosRepoPriority:
 
     pmconf = '/etc/pacman.conf'
     pmconf_new = '/etc/pacman.conf.pacnew'
+    pmconf_contents = []
 
     def get_pacman_config_contents(self):
-        contents = []
-        
-        with open(self.pmconf, 'r') as pacman_config:
-            contents.extend(pacman_config.readlines())
-        
-        return contents
-    
+        if not self.pmconf_contents:
+            with open(self.pmconf, 'r') as pacman_config:
+                self.pmconf_contents.extend(pacman_config.readlines())
+
+        return self.pmconf_contents
+
+    def has_antergos_repo()
+        return '[antergos]' in self.get_pacman_config_contents()
+
     def antergos_repo_before_arch_repos(self):
         seen_antergos = False
         
@@ -62,7 +68,7 @@ class AntergosRepoPriority:
                 break
 
         return seen_antergos
-     
+
     def get_antergos_repo_lines(self):
         lines = []
         entered_antergos = False
@@ -133,6 +139,9 @@ if __name__ == '__main__':
 
     repo_priority = AntergosRepoPriority()
     doing_install = os.environ.get('CNCHI_RUNNING', False)
+
+    if not repo_priority.has_antergos_repo():
+        sys.exit(0)
 
     if not repo_priority.antergos_repo_before_arch_repos():
         print('Changing antergos repo priority in pacman.conf.pacnew...')

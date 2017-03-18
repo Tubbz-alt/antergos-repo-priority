@@ -55,7 +55,7 @@ class AntergosRepoPriority:
 
         return self.pmconf_contents
 
-    def has_antergos_repo()
+    def has_antergos_repo(self):
         return '[antergos]' in self.get_pacman_config_contents()
 
     def antergos_repo_before_arch_repos(self):
